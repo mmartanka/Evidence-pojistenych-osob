@@ -1,5 +1,4 @@
 from evidence import EvidencePojistenych
-from pojisteny import Pojisteny
 import time as _time
 
 pojisteni = EvidencePojistenych() # vytvoření instance
