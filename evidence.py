@@ -3,6 +3,7 @@ from pojisteny import Pojisteny
 class EvidencePojistenych:
 
     def __init__(self):
+        # list pro uložení pojištěnců
         self.evidence = []
 
     def zalozit_pojisteneho(self, jmeno, prijmeni, vek, telefon):  # metoda pro vytvoření nového pojištěného 
@@ -14,8 +15,15 @@ class EvidencePojistenych:
             print(pojisteny)
 
     def najdi_pojisteneho(self, jmeno, prijmeni):  # metoda pro vyhledání pojištěného podle jména a příjmení
+        nalezeno = False
         for pojisteny in self.evidence:
             if pojisteny.jmeno == jmeno and pojisteny.prijmeni == prijmeni:
                 print(f"\n{pojisteny}")
+                nalezeno = True  
+            # v případě, že v databázi nebude nalezeno
+            if nalezeno:
+                pass
+            else:
+                print("\nZadané údaje se neshodují s žádným záznamem v databázi.")
           
                     
