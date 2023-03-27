@@ -1,1 +1,1 @@
-# projekt_evidence_pojistenych
+# Evidence pojištěných osob / registry of insured persons
