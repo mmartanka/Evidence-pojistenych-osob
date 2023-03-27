@@ -5,8 +5,7 @@ print("\nEVIDENCE POJISTENYCH")
 print("--------------------\n")
 
 # Vytvoření databáze evidence pojištěných
-evidence = EvidencePojistenych()
-pojistenci = []
+pojistenci = EvidencePojistenych([])
 
 
 # Vytvoření nabídky
@@ -67,7 +66,7 @@ while True:
                 print("Chyba! Zadejte prosím telefonní číslo ve správném formátu.\n")
                 _time.sleep(0.5) 
             
-        novy_pojisteny = evidence.zalozit_pojisteneho(jmeno, prijmeni, vek, telefon)
+        novy_pojisteny = pojistenci.zalozit_pojisteneho(jmeno, prijmeni, vek, telefon)
         print("\nPojištěný/á", novy_pojisteny.jmeno, novy_pojisteny.prijmeni,  "byl úspěšně přidán do evidence. Pokračujte libovolnou klávesou.\n")
 
     elif (volba == 2):
@@ -75,8 +74,8 @@ while True:
         print("\nSEZNAM VŠECH POJIŠTĚNÝCH\n")
         _time.sleep(1)
 
-        evidence.zobraz_pojistene()
-        break
+        Pojisteny.zobraz_pojistene()
+        
 
     elif (volba == 3):
         # Vyhledá pojištěného buď podle jména a příjmení, nebo podle věku - záleží na volbě uživatele

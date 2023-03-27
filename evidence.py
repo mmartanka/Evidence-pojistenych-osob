@@ -14,7 +14,8 @@ class EvidencePojistenych:
         return pojisteny
                    
     def zobraz_pojistene(self):
-        return self.evidence
+        for pojisteny in self.evidence:
+            print(pojisteny)
 
     def najdi_pojisteneho (self, jmeno, prijmeni):
         for pojisteny in self.evidence:
